@@ -1,0 +1,20 @@
+type FirstName = char[100];
+
+type LastName = char[100];
+
+type Human = interface
+	function firstName: FirstName;
+	function lastName: LastName;
+	function age: int8;
+end
+
+type Member = record
+	private id: int64;
+	private firstName: FirstName;
+	private lastName: LastName;
+	private age: int8;
+end
+
+function Member.firstName: FirstName do
+
+end
