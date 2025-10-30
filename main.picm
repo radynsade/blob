@@ -26,5 +26,5 @@ function Member.firstName: FirstName do
 	firstName := 'Hello world!';
 end
 
-type Leader = record from Member // Inherits Member type with all its methods and properties.
+type Leader = from Member // Inherits Member type with all its methods and properties.
 end
