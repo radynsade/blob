@@ -2,19 +2,29 @@ type FirstName = char[100];
 
 type LastName = char[100];
 
+type Email = char[255];
+
 type Human = interface
 	function firstName: FirstName;
 	function lastName: LastName;
 	function age: int8;
 end
 
+{ Member type }
+
 type Member = record
-	private id: int64;
-	private firstName: FirstName;
-	private lastName: LastName;
-	private age: int8;
+	private
+		id: int64;
+		firstName: FirstName;
+		lastName: LastName;
+		age: int8;
+	public
+		email: char[255];
 end
 
 function Member.firstName: FirstName do
+	firstName := 'Hello world!';
+end
 
+type Leader = record from Member // Inherits Member type with all its methods and properties.
 end
