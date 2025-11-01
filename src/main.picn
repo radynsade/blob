@@ -1,0 +1,25 @@
+use
+	std.out.println;
+
+type
+	FirstName = char[100];
+
+	LastName = char[100];
+
+	Human = interface
+		firstName: function() => FirstName;
+		lastName: function() => LastName;
+		mutable age: int8;
+	end
+
+	Member = record of Human
+		private
+			_firstName: FirstName;
+			_lastName: LastName;
+	end
+
+
+
+function main do
+	println('Hello, world!');
+end

@@ -22,6 +22,14 @@ type Member = record
 		email: char[255];
 end
 
+function Member.constructor do
+
+end
+
+function Member.destructor do
+
+end
+
 function Member.firstName: FirstName do
 	firstName := 'Hello world!';
 end
