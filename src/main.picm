@@ -1,0 +1,21 @@
+use std.out.println;
+
+type FirstName = char[100];
+
+type LastName = char[100];
+
+type Human = record
+	firstName = function (): FirstName do
+
+	end;
+	lastName = function (): LastName do
+
+	end;
+end
+
+const newHuman = function (const firstName: string, const lastName: string): FirstName do
+	return Human(
+		firstName: firstName,
+		lastName: lastName,
+	);
+end
