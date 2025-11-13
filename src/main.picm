@@ -5,12 +5,21 @@ type FirstName = char[100];
 type LastName = char[100];
 
 type Human = record
-	firstName = function (): FirstName do
+	public exampleConstant = 10;
 
-	end;
-	lastName = function (): LastName do
+	public exampleConstantWithType: int8 = 0b11111111;
 
-	end;
+	private _firstName: FirstName;
+
+	private _lastName: LastName;
+
+	public firstName = function (): FirstName do
+		return this._firstName;
+	end
+
+	public lastName = function (): LastName do
+		return this._lastName;
+	end
 end
 
 const newHuman = function (const firstName: string, const lastName: string): FirstName do
