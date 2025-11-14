@@ -1,0 +1,23 @@
+public type FirstName := char[100];
+
+public type LastName := char[100];
+
+public type Human := record
+	firstName: FirstName;
+	lastName: LastName;
+end
+
+public const newHuman := function (const firstName: string, const lastName: string) -> FirstName do
+	return Human(
+		firstName := firstName,
+		lastName := lastName,
+	);
+end
+
+public const getFirstName(const human: Human): FirstName do
+	return human.firstName;
+end
+
+public const getLastName(const human: Human): LastName do
+	return human.lastName;
+end

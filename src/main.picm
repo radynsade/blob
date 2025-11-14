@@ -1,30 +1,14 @@
+use human.Human;
+use human.newHuman;
+use human.getFirstName;
+use human.getLastName;
+use human.FirstName;
+use human.LastName;
 use std.out.println;
 
-type FirstName = char[100];
+public const main := function () do
+	var human: Human := newHuman('Bobby', 'Benson');
+	var firstName: FirstName := getFirstName(human);
+	println(firstName); // 'Bobby'
 
-type LastName = char[100];
-
-type Human = record
-	public exampleConstant = 10;
-
-	public exampleConstantWithType: int8 = 0b11111111;
-
-	private _firstName: FirstName;
-
-	private _lastName: LastName;
-
-	public firstName = function (): FirstName do
-		return this._firstName;
-	end
-
-	public lastName = function (): LastName do
-		return this._lastName;
-	end
-end
-
-const newHuman = function (const firstName: string, const lastName: string): FirstName do
-	return Human(
-		firstName: firstName,
-		lastName: lastName,
-	);
 end

@@ -1,0 +1,4 @@
+use human.Human
+
+public type Employee = record of Human
+end
